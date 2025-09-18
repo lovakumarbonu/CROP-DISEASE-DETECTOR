@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: "/CROP-DISEASE-DETECTOR",
+  base: "/CROP-DISEASE-DETECTOR/",
 })
