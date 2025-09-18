@@ -1,7 +1,0 @@
-{
-  "name": " AI Crop Disease Detector",
-  "description": "An interactive web application that uses AI to detect and diagnose diseases in crop leaves from user-uploaded images.",
-  "requestFramePermissions": [
-    "camera"
-  ]
-}
