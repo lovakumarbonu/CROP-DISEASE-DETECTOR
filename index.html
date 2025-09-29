@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/snake-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offline Snake Game</title>
+    <meta name="theme-color" content="#22c55e" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Snake Game">
+    <link rel="manifest" href="/manifest.json" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1"
+  }
+}
+</script>
+<style>
+      @keyframes snake-loader-anim {
+        0%, 100% {
+          transform: translateX(0) scale(1);
+        }
+        25% {
+          transform: translateX(40px) scale(0.8);
+        }
+        50% {
+          transform: translateX(0) scale(1.2);
+        }
+        75% {
+          transform: translateX(-40px) scale(0.8);
+        }
+      }
+      .snake-loader-segment {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-image: radial-gradient(circle at 30% 30%, #4ade80, #16a34a);
+        box-shadow: 0 0 10px #4ade80, 0 0 20px #4ade80, inset 0 0 5px rgba(255,255,255,0.5);
+        animation: snake-loader-anim 2.5s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        position: absolute;
+      }
+    </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-900">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(error => {
+              console.log('ServiceWorker registration failed: ', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "Offline Snake Game",
+  "short_name": "Snake",
+  "description": "A classic offline snake game built with React. Playable anytime, anywhere!",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#22c55e",
+  "icons": [
+    {
+      "src": "snake-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Offline Snake Game",
+  "description": "A classic offline snake game built with React and Tailwind CSS. Control the snake to eat the food and grow longer, but don't hit the walls or yourself!",
+  "requestFramePermissions": []
+}
